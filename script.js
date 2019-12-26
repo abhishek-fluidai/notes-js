@@ -111,10 +111,10 @@ const addNote = () => {
   }
 
      window.addEventListener('load', () => {
-      console.log('page is fully loaded');
+      // console.log('page is fully loaded');
       loadTasks();
     });
-     window.addEventListener('offline', () => console.log('You are offline! :('))
+    
       
   window.onload = () => {
 'use strict';

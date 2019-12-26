@@ -1,6 +1,6 @@
 {
-    "name": "Task App",
-    "short_name": "Js Task",
+    "name": "Notes App",
+    "short_name": "JS Notes",
     "icons": [
         {
          "src": "icons/android-icon-36x36.png",
