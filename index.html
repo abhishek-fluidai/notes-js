@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notes App</title>
+	<link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+	<link rel="manifest" href="icons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="manifest" href="./manifest.json">
+    
+</head>
+<body>
+	<div class="container-fluid">
+	  <nav>
+	    <div class="nav-wrapper">
+	      <a href="#"  class="brand-logo center">JS Notes</a>
+	      <ul id="nav-mobile" class="right hide-on-med-and-down">
+	        <!-- <li><a href="sass.html">Sass</a></li>
+	        <li><a href="badges.html">Components</a></li> -->
+	        <!-- <li><a href="collapsible.html">New Note</a></li> -->
+	      </ul>
+	    </div>
+	  </nav>
+
+
+    <div class="row">
+      <div class="col s12 m4 l5 input-col">
+      	<h5 class="center"> Enter Your Note Here! </h5>
+      	<form class="col s12">
+      <div class="row">
+          <div class="input-field col s12">
+          	<i class="material-icons prefix " >mode_edit</i>
+            <textarea id="textarea" class="materialize-textarea"  data-length="500"></textarea>
+            <label for="textarea">write your Note!</label>
+		<!-- 	<a class="btn-floating right waves-effect waves-light red"><i class="material-icons">add</i></a> -->
+
+          </div>
+       <!--    <a class="waves-effect waves-light btn-small right"><i class="material-icons right">clear</i>Clear All</a>
+          <div></div> -->
+          <div class="center-icon ">
+          
+         
+            <a class="btn-floating waves-effect waves-light center btn" onclick="clearNote()" ><i class="material-icons">clear</i></a>
+             <a class="btn-floating waves-effect waves-light center btn" onclick="copyNote()" style="margin-left: 15px;"><i class="material-icons">content_copy</i></a>
+            <a class="btn-floating waves-effect waves-light center btn  add-note" style="margin-left: 15px;"><i class="material-icons" onclick="addNote()">add</i></a>
+            </div>
+        </div>
+    </form>
+      </div>
+
+      <div class="col s12 m8 l7 note-display center">
+      	<ul id="note-list">
+      	
+		<li id="0" class="flow-text note-item" onmouseover="delHover(0)" onmouseout="delOut(0)">
+		Enter a Note and Press + or F
+		 <a class="btn-floating waves-effect waves-light right close-button  btn 0 " onclick="deleteNote(0)" ><i class="material-icons">delete</i></a>
+		</li>
+      	</ul>
+
+      </div>
+	</div>
+</div>
+<script  src="script/jquery.min.js"></script>
+ <script type="text/javascript" src="script/materialize.min.js"></script>
+ <script type="text/javascript" src="script.js"></script>
+ <script type="text/javascript">
+ 	
+  $(document).ready(function() {
+    $('input#input_text, textarea#textarea').characterCounter();
+  });
+ </script>
+</body>
+</html>
